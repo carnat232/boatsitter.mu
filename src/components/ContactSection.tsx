@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle, Mail, MapPin, Phone, Clock, Facebook } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 const ContactSection = () => {
   const handleWhatsAppClick = () => {
@@ -111,8 +112,10 @@ const ContactSection = () => {
             </div>
           </div>
           
-          {/* Map and Additional Info */}
+          {/* Contact Form and Additional Info */}
           <div className="space-y-6">
+            <ContactForm />
+            
             <Card className="bg-white/10 border-white/20">
               <CardContent className="p-6">
                 <h4 className="text-xl font-semibold font-poppins mb-4 text-white">
@@ -131,33 +134,6 @@ const ContactSection = () => {
                 <p className="text-white/80 text-sm mt-4">
                   Located in prime marina facilities across Mauritius, easily accessible for both local and international clients.
                 </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-white/10 border-white/20">
-              <CardContent className="p-6">
-                <h4 className="text-xl font-semibold font-poppins mb-4 text-white">
-                  Why Contact Us?
-                </h4>
-                
-                <ul className="space-y-3 text-white/80">
-                  <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-white/60 rounded-full mt-2 flex-shrink-0" />
-                    <span>Free consultation and estimates</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-white/60 rounded-full mt-2 flex-shrink-0" />
-                    <span>Rapid response to emergencies</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-white/60 rounded-full mt-2 flex-shrink-0" />
-                    <span>Expert advice on all marine matters</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-white/60 rounded-full mt-2 flex-shrink-0" />
-                    <span>Personalized service solutions</span>
-                  </li>
-                </ul>
               </CardContent>
             </Card>
           </div>

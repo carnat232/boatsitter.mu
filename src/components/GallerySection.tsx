@@ -6,6 +6,56 @@ const GallerySection = () => {
 
   const galleryImages = [
     {
+      src: "/lovable-uploads/528731a5-9fe6-4d65-87a5-7a9ec770b88e.png",
+      alt: "Boats anchored in crystal clear tropical waters",
+      title: "Premium Boats in Paradise Waters"
+    },
+    {
+      src: "/lovable-uploads/fde65bfe-b56c-4fb9-b54f-84d04aecc1a1.png",
+      alt: "Heavy crane lifting boat for maintenance",
+      title: "Professional Boat Lifting Services"
+    },
+    {
+      src: "/lovable-uploads/360d28fa-6132-405d-b78c-357e94ad3135.png",
+      alt: "Large catamaran being serviced in boatyard",
+      title: "Catamaran Maintenance & Care"
+    },
+    {
+      src: "/lovable-uploads/781cc77b-3447-4241-b483-e3c27e08b433.png",
+      alt: "Happy customer with newly restored boat",
+      title: "Satisfied Customer & Quality Work"
+    },
+    {
+      src: "/lovable-uploads/3f643b38-1b36-47e0-8ba1-cddfd2df20ff.png",
+      alt: "Boat covered and stored securely",
+      title: "Secure Boat Storage Solutions"
+    },
+    {
+      src: "/lovable-uploads/678db23d-1627-4881-846f-acc2a0ab2fe1.png",
+      alt: "Queen Snapper restored fishing vessel",
+      title: "Fishing Boat Restoration"
+    },
+    {
+      src: "/lovable-uploads/db6988bf-3bff-4fc1-a30e-fcb0cdc66226.png",
+      alt: "Boat with protective blue covering",
+      title: "Weather Protection Services"
+    },
+    {
+      src: "/lovable-uploads/429e296e-7ca7-4d5e-837e-4ea36240cac2.png",
+      alt: "Modern boat with twin outboard engines",
+      title: "Engine Installation & Setup"
+    },
+    {
+      src: "/lovable-uploads/0483db77-bbf8-482f-8f0f-11f64fadea8f.png",
+      alt: "Boat being lifted and transported",
+      title: "Boat Transport Operations"
+    },
+    {
+      src: "/lovable-uploads/b485b670-477c-4357-abaf-62a14582b996.png",
+      alt: "Heavy construction equipment in marine operation",
+      title: "Marine Construction Equipment"
+    },
+    {
       src: "/lovable-uploads/fe669e4b-a480-402f-b1c2-e771deac30e4.png",
       alt: "Professional boat on pristine waters",
       title: "Quality Boats on Mauritius Waters"
