@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				poppins: ['Poppins', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +64,24 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'marine-blue': 'hsl(var(--marine-blue))',
+				'marine-blue-light': 'hsl(var(--marine-blue-light))',
+				'marine-blue-dark': 'hsl(var(--marine-blue-dark))',
+				'ocean-blue': 'hsl(var(--ocean-blue))',
+				'sea-foam': 'hsl(var(--sea-foam))',
+				'coastal-gray': 'hsl(var(--coastal-gray))',
+				'deep-water': 'hsl(var(--deep-water))'
+			},
+			backgroundImage: {
+				'gradient-marine': 'var(--gradient-marine)',
+				'gradient-ocean': 'var(--gradient-ocean)',
+				'gradient-coastal': 'var(--gradient-coastal)'
+			},
+			boxShadow: {
+				'marine': 'var(--shadow-marine)',
+				'ocean': 'var(--shadow-ocean)',
+				'soft': 'var(--shadow-soft)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
