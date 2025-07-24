@@ -42,24 +42,24 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-12 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-poppins text-deep-water mb-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold font-poppins text-deep-water mb-4">
             What Our Clients Say
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Don't just take our word for it. Hear from boat owners who trust us with their most valuable assets.
           </p>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
-          <Card className="bg-white shadow-2xl border-0 overflow-hidden">
-            <CardContent className="p-8 md:p-12">
-              <div className="flex flex-col md:flex-row items-center gap-8">
+        <div className="relative max-w-3xl mx-auto">
+          <Card className="bg-white shadow-xl border-0 overflow-hidden">
+            <CardContent className="p-6 md:p-8">
+              <div className="flex flex-col md:flex-row items-center gap-6">
                 {/* Testimonial Image */}
                 <div className="flex-shrink-0">
-                  <div className="w-32 h-32 rounded-full overflow-hidden shadow-lg">
+                  <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg">
                     <img
                       src={testimonials[currentIndex].image}
                       alt={testimonials[currentIndex].name}
@@ -70,22 +70,22 @@ const TestimonialsSection = () => {
 
                 {/* Testimonial Content */}
                 <div className="flex-1 text-center md:text-left">
-                  <Quote className="h-8 w-8 text-marine mb-4 mx-auto md:mx-0" />
+                  <Quote className="h-6 w-6 text-marine mb-3 mx-auto md:mx-0" />
                   
-                  <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed italic">
+                  <p className="text-base md:text-lg text-gray-700 mb-4 leading-relaxed italic">
                     "{testimonials[currentIndex].text}"
                   </p>
                   
                   {/* Rating Stars */}
-                  <div className="flex justify-center md:justify-start gap-1 mb-4">
+                  <div className="flex justify-center md:justify-start gap-1 mb-3">
                     {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
                   
                   {/* Author Info */}
                   <div>
-                    <h4 className="text-xl font-semibold text-deep-water">
+                    <h4 className="text-lg font-semibold text-deep-water">
                       {testimonials[currentIndex].name}
                     </h4>
                     <p className="text-marine font-medium">
@@ -101,7 +101,7 @@ const TestimonialsSection = () => {
           </Card>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-center gap-4 mt-8">
+          <div className="flex justify-center gap-4 mt-6">
             <Button
               variant="outline"
               size="icon"
@@ -122,7 +122,7 @@ const TestimonialsSection = () => {
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-2 mt-4">
             {testimonials.map((_, index) => (
               <button
                 key={index}
