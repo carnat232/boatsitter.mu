@@ -26,7 +26,7 @@ const HeroSection = () => {
           <img 
             src={boatsitterLogo} 
             alt="Boat Sitter Mauritius Logo" 
-            className="h-20 md:h-24 w-auto mx-auto mb-4"
+            className="h-20 md:h-24 w-auto mx-auto mb-4 object-contain"
           />
         </div>
         

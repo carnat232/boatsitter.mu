@@ -50,7 +50,7 @@ const Navigation = () => {
             <img 
               src={boatsitterLogo} 
               alt="Boat Sitter Mauritius Logo" 
-              className="h-10 w-auto"
+              className="h-12 w-auto object-contain"
             />
             <span className={`text-xl font-bold font-poppins ${
               isScrolled ? "text-deep-water" : "text-white"

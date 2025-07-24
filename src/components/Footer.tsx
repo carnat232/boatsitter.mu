@@ -26,7 +26,7 @@ const Footer = () => {
               <img 
                 src={logoImage} 
                 alt="Boat Sitter Mauritius Logo" 
-                className="w-10 h-10 object-contain"
+                className="w-12 h-12 object-contain"
               />
               <span className="text-xl font-bold font-poppins">
                 Boat Sitter Mauritius
