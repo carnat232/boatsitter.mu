@@ -9,19 +9,15 @@ const AboutSection = () => {
           
           <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
             <p>
-              With over two decades of experience in the Mauritian marine industry, Boat Sitter Mauritius has established itself as the island's most trusted partner for complete boat solutions. Our comprehensive approach combines traditional craftsmanship with modern technology to deliver exceptional results.
+              With years of experience, Boat Sitter Mauritius is your trusted partner for all boat needs on the island — from buying, selling, repairs, and renovations to storage and long-term maintenance.
             </p>
             
             <p>
-              From our state-of-the-art facility, we serve both local boat owners and international clients who dock their vessels in Mauritius. Our team of certified marine professionals is dedicated to treating every boat with the same care and attention we would give our own.
-            </p>
-            
-            <p>
-              Whether you need routine maintenance, emergency repairs, or long-term storage solutions, we provide reliable, professional service that keeps your vessel in pristine condition year-round.
+              We blend traditional craftsmanship with modern marine technology to deliver quality work from our state-of-the-art facility. Whether you're a local owner or an international client, our certified team provides reliable, year-round service to keep your vessel safe, functional, and ready for the sea.
             </p>
             
             <p className="font-semibold text-marine-blue text-xl">
-              Your boat's safety and performance is our passion and expertise.
+              Boatsitter helps you with everything your boat needs — all in one place.
             </p>
           </div>
         </div>

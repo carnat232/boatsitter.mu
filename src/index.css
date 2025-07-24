@@ -37,13 +37,13 @@ All colors MUST be HSL.
     --ring: 210 100% 35%;
 
     /* Marine theme colors */
-    --marine-blue: 210 100% 35%;
-    --marine-blue-light: 210 100% 45%;
-    --marine-blue-dark: 210 100% 25%;
-    --ocean-blue: 197 37% 24%;
-    --sea-foam: 180 25% 88%;
+    --marine-blue: 195 90% 45%;
+    --marine-blue-light: 185 85% 55%;
+    --marine-blue-dark: 215 90% 25%;
+    --ocean-blue: 200 80% 40%;
+    --sea-foam: 185 70% 85%;
     --coastal-gray: 210 20% 92%;
-    --deep-water: 210 50% 15%;
+    --deep-water: 215 90% 25%;
 
     /* Gradients */
     --gradient-marine: linear-gradient(135deg, hsl(var(--marine-blue)), hsl(var(--ocean-blue)));

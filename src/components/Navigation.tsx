@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Anchor, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
+import boatsitterLogo from "@/assets/boatsitter-logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,10 +46,12 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-marine rounded-full flex items-center justify-center">
-              <Anchor className="h-5 w-5 text-white" />
-            </div>
+          <div className="flex items-center gap-3">
+            <img 
+              src={boatsitterLogo} 
+              alt="Boat Sitter Mauritius Logo" 
+              className="h-10 w-auto"
+            />
             <span className={`text-xl font-bold font-poppins ${
               isScrolled ? "text-deep-water" : "text-white"
             }`}>

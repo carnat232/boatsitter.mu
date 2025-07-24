@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-marina.jpg";
+import boatsitterLogo from "@/assets/boatsitter-logo.png";
 
 const HeroSection = () => {
   const handleWhatsAppClick = () => {
@@ -20,9 +21,18 @@ const HeroSection = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
+        {/* Logo in Hero */}
+        <div className="mb-8">
+          <img 
+            src={boatsitterLogo} 
+            alt="Boat Sitter Mauritius Logo" 
+            className="h-20 md:h-24 w-auto mx-auto mb-4"
+          />
+        </div>
+        
         <h1 className="text-5xl md:text-7xl font-bold font-poppins mb-6 leading-tight">
           Mauritius' Trusted
-          <span className="block text-transparent bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text">
+          <span className="block text-transparent bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text">
             Marine Partner
           </span>
         </h1>
