@@ -1,4 +1,5 @@
-import { Anchor, MessageCircle, Mail, MapPin } from "lucide-react";
+import { Anchor, MessageCircle, Mail, MapPin, Facebook } from "lucide-react";
+import logoImage from "@/assets/boatsitter-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,16 +12,22 @@ const Footer = () => {
     window.open("mailto:boatsitter@gmail.com", "_blank");
   };
 
+  const handleFacebookClick = () => {
+    window.open("https://web.facebook.com/Boatsitter", "_blank");
+  };
+
   return (
     <footer className="bg-deep-water text-white">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-marine rounded-full flex items-center justify-center">
-                <Anchor className="h-5 w-5 text-white" />
-              </div>
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src={logoImage} 
+                alt="Boat Sitter Mauritius Logo" 
+                className="w-10 h-10 object-contain"
+              />
               <span className="text-xl font-bold font-poppins">
                 Boat Sitter Mauritius
               </span>
@@ -28,7 +35,7 @@ const Footer = () => {
             
             <p className="text-white/80 mb-6 max-w-md leading-relaxed">
               Mauritius' trusted marine partner providing comprehensive boat solutions including storage, 
-              repairs, building, and management services with over 20 years of expertise.
+              repairs, building, and management services with years of expertise.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -46,6 +53,14 @@ const Footer = () => {
               >
                 <Mail className="h-4 w-4" />
                 Email
+              </button>
+
+              <button 
+                onClick={handleFacebookClick}
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-poppins"
+              >
+                <Facebook className="h-4 w-4" />
+                Facebook
               </button>
             </div>
           </div>

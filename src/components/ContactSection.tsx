@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle, Mail, MapPin, Phone, Clock } from "lucide-react";
+import { MessageCircle, Mail, MapPin, Phone, Clock, Facebook } from "lucide-react";
 
 const ContactSection = () => {
   const handleWhatsAppClick = () => {
@@ -9,6 +9,10 @@ const ContactSection = () => {
 
   const handleEmailClick = () => {
     window.open("mailto:boatsitter@gmail.com", "_blank");
+  };
+
+  const handleFacebookClick = () => {
+    window.open("https://web.facebook.com/Boatsitter", "_blank");
   };
 
   return (
@@ -94,6 +98,16 @@ const ContactSection = () => {
                 <Mail className="h-5 w-5" />
                 Send Email
               </Button>
+
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={handleFacebookClick}
+                className="flex-1 bg-blue-600 border-blue-600 text-white hover:bg-blue-700"
+              >
+                <Facebook className="h-5 w-5" />
+                Facebook
+              </Button>
             </div>
           </div>
           
@@ -105,17 +119,12 @@ const ContactSection = () => {
                   Our Location
                 </h4>
                 
-                {/* Google Maps Embed */}
-                <div className="aspect-video rounded-lg overflow-hidden bg-white/20 flex items-center justify-center">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482633.4441300031!2d57.31652!3d-20.2833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c504df94474c9%3A0x4203d9c2116bd031!2sMauritius!5e0!3m2!1sen!2s!4v1635000000000!5m2!1sen!2s"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="rounded-lg"
+                {/* Location Map */}
+                <div className="aspect-video rounded-lg overflow-hidden bg-white/20">
+                  <img 
+                    src="/lovable-uploads/171c5b39-74ca-4a89-b049-a824dd935a24.png"
+                    alt="Boat Sitter Mauritius Location Map"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
                 
