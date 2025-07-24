@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-marina.jpg";
-import boatsitterLogo from "@/assets/boatsitter-logo.png";
+import boatsitterLogo from "/lovable-uploads/1bdc2422-2966-4bab-acb9-91a491e5321a.png";
 
 const HeroSection = () => {
   const handleWhatsAppClick = () => {

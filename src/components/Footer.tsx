@@ -1,5 +1,5 @@
 import { Anchor, MessageCircle, Mail, MapPin, Facebook } from "lucide-react";
-import logoImage from "@/assets/boatsitter-logo.png";
+import logoImage from "/lovable-uploads/1bdc2422-2966-4bab-acb9-91a491e5321a.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
