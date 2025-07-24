@@ -1,68 +1,159 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import heroImage from "@/assets/hero-marina.jpg";
+import boatRepair from "@/assets/boat-repair.jpg";
+import boatPainting from "@/assets/boat-painting.jpg";
+import boatStorage from "@/assets/boat-storage.jpg";
+import marineRescue from "@/assets/marine-rescue.jpg";
 import boatsitterLogo from "/lovable-uploads/1bdc2422-2966-4bab-acb9-91a491e5321a.png";
 
 const HeroSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      image: heroImage,
+      title: "All Your Boat Needs in One Place",
+      subtitle: "Professional marine services in the heart of Mauritius"
+    },
+    {
+      image: boatRepair,
+      title: "Building, Storing & Renovating Boats",
+      subtitle: "Expert craftsmanship meets modern marine technology"
+    },
+    {
+      image: boatPainting,
+      title: "Trusted by Locals & International Owners",
+      subtitle: "Years of experience serving the Mauritian marine community"
+    },
+    {
+      image: boatStorage,
+      title: "Secure Storage & Maintenance",
+      subtitle: "Keep your vessel safe and sea-ready year-round"
+    },
+    {
+      image: marineRescue,
+      title: "24/7 Emergency Marine Services",
+      subtitle: "Professional rescue and emergency support when you need it"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/2305725336", "_blank");
+    window.open("https://wa.me/23057252366", "_blank");
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
+      {/* Slideshow Background */}
+      <div className="absolute inset-0">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat transform transition-transform duration-[4000ms] ease-out scale-105 hover:scale-110"
+              style={{ 
+                backgroundImage: `url(${slide.image})`,
+                animation: index === currentSlide ? 'kenBurns 4s ease-out' : 'none'
+              }}
+            />
+          </div>
+        ))}
+      </div>
       
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/40" />
       
+      {/* Navigation Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-2 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-colors"
+      >
+        <ChevronLeft className="h-6 w-6" />
+      </button>
+      
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-2 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-colors"
+      >
+        <ChevronRight className="h-6 w-6" />
+      </button>
+
       {/* Content */}
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-        {/* Logo in Hero */}
-        <div className="mb-8">
+      <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-6">
+        {/* Logo */}
+        <div className="mb-8 animate-fade-in">
           <img 
             src={boatsitterLogo} 
             alt="Boat Sitter Mauritius Logo" 
-            className="h-20 md:h-24 w-auto mx-auto mb-4 object-contain"
+            className="h-20 md:h-24 w-auto mx-auto mb-4 object-contain drop-shadow-lg"
           />
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-bold font-poppins mb-6 leading-tight">
-          Mauritius' Trusted
-          <span className="block text-transparent bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text">
-            Marine Partner
-          </span>
-        </h1>
+        {/* Animated Headlines */}
+        <div className="min-h-[200px] flex flex-col justify-center">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`transition-all duration-700 ${
+                index === currentSlide 
+                  ? 'opacity-100 transform translate-y-0' 
+                  : 'opacity-0 transform translate-y-4 absolute'
+              }`}
+            >
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-poppins mb-4 leading-tight">
+                {slide.title.split(' ').slice(0, -3).join(' ')}
+                <span className="block text-transparent bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text">
+                  {slide.title.split(' ').slice(-3).join(' ')}
+                </span>
+              </h1>
+              
+              <p className="text-lg md:text-xl font-light mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed">
+                {slide.subtitle}
+              </p>
+            </div>
+          ))}
+        </div>
         
-        <p className="text-xl md:text-2xl font-light mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed">
-          From storage to repairs, we handle it all with professional expertise and decades of experience
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        {/* Fixed WhatsApp CTA */}
+        <div className="fixed bottom-6 right-6 z-30 md:relative md:bottom-auto md:right-auto md:flex md:flex-col md:sm:flex-row md:gap-4 md:justify-center md:items-center">
           <Button 
             variant="whatsapp" 
             size="xl"
             onClick={handleWhatsAppClick}
-            className="min-w-[200px]"
+            className="min-w-[200px] shadow-2xl animate-pulse hover:animate-none"
           >
             <MessageCircle className="h-5 w-5" />
-            Contact us on WhatsApp
-          </Button>
-          
-          <Button 
-            variant="outline" 
-            size="xl"
-            className="bg-white/10 border-white/30 text-white hover:bg-white/20 min-w-[200px]"
-            onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Our Services
+            📞 Get a Quote on WhatsApp
           </Button>
         </div>
         
-        <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-8 text-sm text-gray-300">
+        {/* Service Indicators */}
+        <div className="hidden md:flex mt-12 justify-center items-center gap-8 text-sm text-gray-300">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
             Licensed & Insured
@@ -78,11 +169,19 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse" />
-        </div>
+      {/* Slide Indicators */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide 
+                ? 'bg-white scale-125' 
+                : 'bg-white/50 hover:bg-white/75'
+            }`}
+          />
+        ))}
       </div>
     </section>
   );
