@@ -4,41 +4,49 @@ import { Card, CardContent } from "@/components/ui/card";
 const ServicesSection = () => {
   const services = [
     {
+      id: "boat-storage",
       icon: Warehouse,
       title: "Boat Storage",
       description: "Secure, climate-controlled storage facilities with 24/7 monitoring for your peace of mind."
     },
     {
+      id: "new-boat-building",
       icon: Ship,
       title: "New Boat Building",
       description: "Custom boat construction using premium materials and expert craftsmanship."
     },
     {
+      id: "mechanical-electrical",
       icon: Wrench,
       title: "Mechanical & Electrical",
       description: "Complete engine overhauls, electrical systems, and diagnostic services by certified technicians."
     },
     {
+      id: "paint-fiberglass",
       icon: Palette,
       title: "Paint, Fiberglass & Gelcoat",
       description: "Professional hull restoration, painting, and fiberglass repair for lasting protection."
     },
     {
+      id: "licensing-insurance",
       icon: Shield,
       title: "Licensing & Insurance",
       description: "Complete documentation assistance for registration, licensing, and insurance requirements."
     },
     {
+      id: "salvage-rescue",
       icon: LifeBuoy,
       title: "Salvage & Rescue",
       description: "24/7 emergency marine rescue and salvage services across Mauritian waters."
     },
     {
+      id: "boat-management",
       icon: Settings,
       title: "Boat Management",
       description: "Comprehensive vessel management including maintenance scheduling and crew coordination."
     },
     {
+      id: "marine-consulting",
       icon: Anchor,
       title: "Marine Consulting",
       description: "Expert advice on vessel acquisition, upgrades, and marine regulations compliance."
@@ -63,6 +71,7 @@ const ServicesSection = () => {
             return (
               <Card 
                 key={index} 
+                id={service.id}
                 className="group hover:shadow-ocean transition-all duration-300 hover:-translate-y-2 border-coastal-gray hover:border-marine-blue"
               >
                 <CardContent className="p-6 text-center">

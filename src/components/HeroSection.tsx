@@ -22,25 +22,25 @@ const HeroSection = () => {
       image: boatRepair,
       title: "Building, Storing & Renovating Boats",
       subtitle: "Expert craftsmanship meets modern marine technology",
-      linkTo: "#services"
+      linkTo: "#new-boat-building"
     },
     {
       image: boatPainting,
       title: "Trusted by Locals & International Owners",
       subtitle: "Years of experience serving the Mauritian marine community",
-      linkTo: "#services"
+      linkTo: "#paint-fiberglass"
     },
     {
       image: boatStorage,
       title: "Secure Storage & Maintenance",
       subtitle: "Keep your vessel safe and sea-ready year-round",
-      linkTo: "#services"
+      linkTo: "#boat-management"
     },
     {
       image: marineRescue,
       title: "24/7 Emergency Marine Services",
       subtitle: "Professional rescue and emergency support when you need it",
-      linkTo: "#services"
+      linkTo: "#salvage-rescue"
     }
   ];
 
