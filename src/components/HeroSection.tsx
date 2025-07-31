@@ -6,7 +6,7 @@ import boatRepair from "@/assets/boat-repair.jpg";
 import boatPainting from "@/assets/boat-painting.jpg";
 import boatStorage from "@/assets/boat-storage.jpg";
 import marineRescue from "@/assets/marine-rescue.jpg";
-import boatsitterLogo from "/lovable-uploads/1bdc2422-2966-4bab-acb9-91a491e5321a.png";
+import boatsitterLogo from "/lovable-uploads/05e839a5-1cef-4833-8599-8b7a165fed9d.png";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,27 +15,32 @@ const HeroSection = () => {
     {
       image: heroImage,
       title: "All Your Boat Needs in One Place",
-      subtitle: "Professional marine services in the heart of Mauritius"
+      subtitle: "Professional marine services in the heart of Mauritius",
+      linkTo: "#services"
     },
     {
       image: boatRepair,
       title: "Building, Storing & Renovating Boats",
-      subtitle: "Expert craftsmanship meets modern marine technology"
+      subtitle: "Expert craftsmanship meets modern marine technology",
+      linkTo: "#services"
     },
     {
       image: boatPainting,
       title: "Trusted by Locals & International Owners",
-      subtitle: "Years of experience serving the Mauritian marine community"
+      subtitle: "Years of experience serving the Mauritian marine community",
+      linkTo: "#services"
     },
     {
       image: boatStorage,
       title: "Secure Storage & Maintenance",
-      subtitle: "Keep your vessel safe and sea-ready year-round"
+      subtitle: "Keep your vessel safe and sea-ready year-round",
+      linkTo: "#services"
     },
     {
       image: marineRescue,
       title: "24/7 Emergency Marine Services",
-      subtitle: "Professional rescue and emergency support when you need it"
+      subtitle: "Professional rescue and emergency support when you need it",
+      linkTo: "#services"
     }
   ];
 
@@ -47,8 +52,11 @@ const HeroSection = () => {
     return () => clearInterval(timer);
   }, [slides.length]);
 
-  const handleWhatsAppClick = () => {
-    window.open("https://wa.me/23057252366", "_blank");
+  const handleSlideClick = (linkTo: string) => {
+    const element = document.querySelector(linkTo);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const goToSlide = (index: number) => {
@@ -70,9 +78,10 @@ const HeroSection = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
+            className={`absolute inset-0 transition-opacity duration-1000 cursor-pointer ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
+            onClick={() => handleSlideClick(slide.linkTo)}
           >
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat transform transition-transform duration-[4000ms] ease-out scale-105 hover:scale-110"
@@ -139,17 +148,11 @@ const HeroSection = () => {
           ))}
         </div>
         
-        {/* Fixed WhatsApp CTA */}
-        <div className="fixed bottom-6 right-6 z-30 md:relative md:bottom-auto md:right-auto md:flex md:flex-col md:sm:flex-row md:gap-4 md:justify-center md:items-center">
-          <Button 
-            variant="whatsapp" 
-            size="xl"
-            onClick={handleWhatsAppClick}
-            className="min-w-[200px] shadow-2xl animate-pulse hover:animate-none"
-          >
-            <MessageCircle className="h-5 w-5" />
-            📞 Get a Quote on WhatsApp
-          </Button>
+        {/* Click hint for mobile */}
+        <div className="md:hidden text-center mt-6">
+          <p className="text-sm text-gray-300 animate-pulse">
+            Tap image to explore our services
+          </p>
         </div>
         
         {/* Service Indicators */}

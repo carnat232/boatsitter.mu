@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, MessageCircle } from "lucide-react";
-import boatsitterLogo from "/lovable-uploads/1bdc2422-2966-4bab-acb9-91a491e5321a.png";
+import boatsitterLogo from "/lovable-uploads/05e839a5-1cef-4833-8599-8b7a165fed9d.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,9 +33,6 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const handleWhatsAppClick = () => {
-    window.open("https://wa.me/2305725336", "_blank");
-  };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -55,7 +52,7 @@ const Navigation = () => {
             <span className={`text-xl font-bold font-poppins ${
               isScrolled ? "text-deep-water" : "text-white"
             }`}>
-              Boat Sitter Mauritius
+              Boat Sitter Boat Care Service
             </span>
           </div>
 
@@ -72,15 +69,6 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            
-            <Button 
-              variant="whatsapp" 
-              size="sm"
-              onClick={handleWhatsAppClick}
-            >
-              <MessageCircle className="h-4 w-4" />
-              WhatsApp
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -109,16 +97,6 @@ const Navigation = () => {
                   {item.label}
                 </button>
               ))}
-              
-              <Button 
-                variant="whatsapp" 
-                size="sm"
-                onClick={handleWhatsAppClick}
-                className="w-full"
-              >
-                <MessageCircle className="h-4 w-4" />
-                Contact WhatsApp
-              </Button>
             </div>
           </div>
         )}
