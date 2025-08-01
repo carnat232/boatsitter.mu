@@ -114,31 +114,31 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-6">
         {/* Logo */}
-        <div className="mb-8 animate-fade-in">
+        <div className="mb-6 animate-fade-in">
           <img 
             src={boatsitterLogo} 
             alt="The Boatsitter Boat Care Service Logo" 
-            className="w-auto mx-auto mb-4 object-contain drop-shadow-lg"
+            className="w-auto mx-auto mb-2 object-contain drop-shadow-lg"
             style={{ 
-              height: '32rem', 
-              maxHeight: '80vh'
+              height: '16rem', 
+              maxHeight: '40vh'
             }}
           />
         </div>
         
-        {/* Animated Headlines */}
-        <div className="min-h-[200px] flex flex-col justify-center">
+        {/* Animated Headlines - Directly beneath logo */}
+        <div className="flex flex-col justify-center items-center">
           {slides.map((slide, index) => (
             <div
               key={index}
-              className={`transition-all duration-700 ${
+              className={`transition-all duration-700 text-center ${
                 index === currentSlide 
                   ? 'opacity-100 transform translate-y-0' 
                   : 'opacity-0 transform translate-y-4 absolute'
               }`}
             >
               <h1 
-                className="text-4xl md:text-6xl lg:text-7xl font-bold font-poppins mb-4 leading-tight cursor-pointer hover:scale-105 transition-transform duration-300"
+                className="text-3xl md:text-5xl lg:text-6xl font-bold font-poppins mb-3 leading-tight cursor-pointer hover:scale-105 transition-transform duration-300"
                 onClick={() => handleSlideClick(slide.linkTo)}
               >
                 {slide.title.split(' ').slice(0, -3).join(' ')}
@@ -148,7 +148,7 @@ const HeroSection = () => {
               </h1>
               
               <p 
-                className="text-lg md:text-xl font-light mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed cursor-pointer hover:text-white transition-colors duration-300"
+                className="text-base md:text-lg font-light mb-6 text-gray-200 max-w-2xl mx-auto leading-relaxed cursor-pointer hover:text-white transition-colors duration-300"
                 onClick={() => handleSlideClick(slide.linkTo)}
               >
                 {slide.subtitle}
