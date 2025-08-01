@@ -118,7 +118,11 @@ const HeroSection = () => {
           <img 
             src={boatsitterLogo} 
             alt="The Boatsitter Boat Care Service Logo" 
-            className="h-32 md:h-40 lg:h-48 w-auto mx-auto mb-4 object-contain drop-shadow-lg"
+            className="w-auto mx-auto mb-4 object-contain drop-shadow-lg"
+            style={{ 
+              height: '32rem', 
+              maxHeight: '80vh'
+            }}
           />
         </div>
         
