@@ -6,7 +6,7 @@ import boatRepair from "@/assets/boat-repair.jpg";
 import boatPainting from "@/assets/boat-painting.jpg";
 import boatStorage from "@/assets/boat-storage.jpg";
 import marineRescue from "@/assets/marine-rescue.jpg";
-import boatsitterLogo from "/lovable-uploads/05e839a5-1cef-4833-8599-8b7a165fed9d.png";
+import boatsitterLogo from "/lovable-uploads/78849d4f-6526-4e15-96e2-8d29e0f7a38d.png";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -78,13 +78,12 @@ const HeroSection = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 cursor-pointer ${
+            className={`absolute inset-0 transition-opacity duration-1000 ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
-            onClick={() => handleSlideClick(slide.linkTo)}
           >
             <div 
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat transform transition-transform duration-[4000ms] ease-out scale-105 hover:scale-110"
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat transform transition-transform duration-[4000ms] ease-out scale-105"
               style={{ 
                 backgroundImage: `url(${slide.image})`,
                 animation: index === currentSlide ? 'kenBurns 4s ease-out' : 'none'
@@ -118,8 +117,8 @@ const HeroSection = () => {
         <div className="mb-8 animate-fade-in">
           <img 
             src={boatsitterLogo} 
-            alt="Boat Sitter Mauritius Logo" 
-            className="h-20 md:h-24 w-auto mx-auto mb-4 object-contain drop-shadow-lg"
+            alt="The Boatsitter Boat Care Service Logo" 
+            className="h-32 md:h-40 lg:h-48 w-auto mx-auto mb-4 object-contain drop-shadow-lg"
           />
         </div>
         
@@ -134,14 +133,20 @@ const HeroSection = () => {
                   : 'opacity-0 transform translate-y-4 absolute'
               }`}
             >
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-poppins mb-4 leading-tight">
+              <h1 
+                className="text-4xl md:text-6xl lg:text-7xl font-bold font-poppins mb-4 leading-tight cursor-pointer hover:scale-105 transition-transform duration-300"
+                onClick={() => handleSlideClick(slide.linkTo)}
+              >
                 {slide.title.split(' ').slice(0, -3).join(' ')}
                 <span className="block text-transparent bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text">
                   {slide.title.split(' ').slice(-3).join(' ')}
                 </span>
               </h1>
               
-              <p className="text-lg md:text-xl font-light mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed">
+              <p 
+                className="text-lg md:text-xl font-light mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed cursor-pointer hover:text-white transition-colors duration-300"
+                onClick={() => handleSlideClick(slide.linkTo)}
+              >
                 {slide.subtitle}
               </p>
             </div>
@@ -151,7 +156,7 @@ const HeroSection = () => {
         {/* Click hint for mobile */}
         <div className="md:hidden text-center mt-6">
           <p className="text-sm text-gray-300 animate-pulse">
-            Tap image to explore our services
+            Tap the text to explore our services
           </p>
         </div>
         
