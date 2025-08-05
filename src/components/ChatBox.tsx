@@ -16,7 +16,7 @@ const ChatBox = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "Hi! 👋 Welcome to Boat Sitter Mauritius. How can we help you today?",
+      text: "Hi! 👋 Welcome to Boat Sitter Boat Care Service. How can we help you today?",
       isBot: true,
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     }

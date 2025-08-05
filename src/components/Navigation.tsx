@@ -21,7 +21,7 @@ const Navigation = () => {
     { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
     { label: "Gallery", href: "#gallery" },
-    { label: "FAQ", href: "#faq" },
+    { label: "For Sale", href: "#for-sale" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -46,13 +46,13 @@ const Navigation = () => {
           <div className="flex items-center gap-3">
             <img 
               src={boatsitterLogo} 
-              alt="Boat Sitter Mauritius Logo" 
+              alt="Boat Sitter Boat Care Service Logo" 
               className="h-12 w-auto object-contain"
             />
             <span className={`text-xl font-bold font-poppins ${
               isScrolled ? "text-deep-water" : "text-white"
             }`}>
-              Boat Sitter Boat Care Service
+              <span className="text-2xl">B</span>oat <span className="text-2xl">S</span>itter <span className="text-2xl">B</span>oat <span className="text-2xl">C</span>are <span className="text-2xl">S</span>ervice
             </span>
           </div>
 

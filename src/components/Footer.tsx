@@ -25,11 +25,11 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-4">
               <img 
                 src={logoImage} 
-                alt="Boat Sitter Mauritius Logo" 
+                alt="Boat Sitter Boat Care Service Logo" 
                 className="w-12 h-12 object-contain"
               />
               <span className="text-xl font-bold font-poppins">
-                Boat Sitter Mauritius
+                Boat Sitter Boat Care Service
               </span>
             </div>
             
@@ -119,7 +119,7 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/70 text-sm">
-            © {currentYear} Boat Sitter Mauritius. All rights reserved.
+            © {currentYear} Boat Sitter Boat Care Service. All rights reserved.
           </p>
           
           <div className="flex items-center gap-4 mt-4 md:mt-0">

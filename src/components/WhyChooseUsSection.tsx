@@ -38,7 +38,7 @@ const WhyChooseUsSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-poppins mb-6 text-deep-water">
-            Why Choose Boat Sitter Mauritius?
+            Why Choose Boat Sitter Boat Care Service?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Discover what makes us the preferred marine partner for boat owners across Mauritius

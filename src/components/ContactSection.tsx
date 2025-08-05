@@ -126,7 +126,7 @@ const ContactSection = () => {
                 <div className="aspect-video rounded-lg overflow-hidden bg-white/20">
                   <img 
                     src="/lovable-uploads/171c5b39-74ca-4a89-b049-a824dd935a24.png"
-                    alt="Boat Sitter Mauritius Location Map"
+                    alt="Boat Sitter Boat Care Service Location Map"
                     className="w-full h-full object-cover rounded-lg"
                   />
                 </div>

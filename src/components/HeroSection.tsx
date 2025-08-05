@@ -117,7 +117,7 @@ const HeroSection = () => {
         <div className="mb-6 animate-fade-in">
           <img 
             src={boatsitterLogo} 
-            alt="The Boatsitter Boat Care Service Logo" 
+            alt="The Boat Sitter Boat Care Service Logo" 
             className="w-auto mx-auto mb-2 object-contain drop-shadow-lg"
             style={{ 
               height: '16rem', 
