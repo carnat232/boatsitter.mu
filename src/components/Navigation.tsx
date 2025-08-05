@@ -52,7 +52,7 @@ const Navigation = () => {
             <span className={`text-xl font-bold font-poppins ${
               isScrolled ? "text-deep-water" : "text-white"
             }`}>
-              <span className="text-4xl font-extrabold bg-gradient-to-r from-marine-blue to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">B</span>oat <span className="text-3xl font-bold text-marine-blue">S</span>itter <span className="text-3xl font-bold text-marine-blue">B</span>oat <span className="text-3xl font-bold text-marine-blue">C</span>are <span className="text-3xl font-bold text-marine-blue">S</span>ervice
+              <span className="text-4xl font-dancing font-bold bg-gradient-to-r from-marine-blue to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">B</span>oat <span className="text-3xl font-dancing font-bold text-marine-blue">S</span>itter <span className="text-3xl font-dancing font-bold text-marine-blue">B</span>oat <span className="text-3xl font-dancing font-bold text-marine-blue">C</span>are <span className="text-3xl font-dancing font-bold text-marine-blue">S</span>ervice
             </span>
           </div>
 
