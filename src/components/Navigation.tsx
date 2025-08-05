@@ -49,10 +49,10 @@ const Navigation = () => {
               alt="Boat Sitter Boat Care Service Logo" 
               className="h-16 w-auto object-contain"
             />
-            <span className={`text-sm font-bold font-poppins ${
+            <span className={`text-base font-bold font-poppins ${
               isScrolled ? "text-deep-water" : "text-white"
             }`}>
-              <span className="text-lg font-corsiva font-bold bg-gradient-to-r from-marine-blue to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">B</span>oat <span className="text-lg font-corsiva font-bold text-marine-blue">S</span>itter <span className="text-lg font-corsiva font-bold text-marine-blue">B</span>oat <span className="text-lg font-corsiva font-bold text-marine-blue">C</span>are <span className="text-lg font-corsiva font-bold text-marine-blue">S</span>ervice
+              <span className="text-xl font-corsiva font-bold bg-gradient-to-r from-marine-blue to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">B</span>oat <span className="text-xl font-corsiva font-bold text-marine-blue">S</span>itter <span className="text-xl font-corsiva font-bold text-marine-blue">B</span>oat <span className="text-xl font-corsiva font-bold text-marine-blue">C</span>are <span className="text-xl font-corsiva font-bold text-marine-blue">S</span>ervice
             </span>
           </div>
 
