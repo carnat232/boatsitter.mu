@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, MessageCircle } from "lucide-react";
-import boatsitterLogo from "/lovable-uploads/05e839a5-1cef-4833-8599-8b7a165fed9d.png";
+import boatsitterLogo from "/lovable-uploads/d92b7ddc-4f6c-4db0-ad15-9bdd26b45d86.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);

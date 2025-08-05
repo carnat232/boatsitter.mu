@@ -1,5 +1,5 @@
 import { Anchor, MessageCircle, Mail, MapPin, Facebook } from "lucide-react";
-import logoImage from "/lovable-uploads/1bdc2422-2966-4bab-acb9-91a491e5321a.png";
+import logoImage from "/lovable-uploads/d92b7ddc-4f6c-4db0-ad15-9bdd26b45d86.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
