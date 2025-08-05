@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
-import heroImage from "@/assets/hero-marina.jpg";
+import luxuryYacht from "@/assets/luxury-yacht-mauritius.jpg";
 import boatRepair from "@/assets/boat-repair.jpg";
 import boatPainting from "@/assets/boat-painting.jpg";
-import boatStorage from "@/assets/boat-storage.jpg";
+import openAirStorage from "@/assets/open-air-boat-storage.jpg";
 import marineRescue from "@/assets/marine-rescue.jpg";
 import boatsitterLogo from "/lovable-uploads/aee0d204-0e6d-4506-b749-788d26664692.png";
 
@@ -13,7 +13,7 @@ const HeroSection = () => {
 
   const slides = [
     {
-      image: heroImage,
+      image: luxuryYacht,
       title: "All Your Boat Needs in One Place",
       subtitle: "Professional marine services in the heart of Mauritius",
       linkTo: "#services"
@@ -31,7 +31,7 @@ const HeroSection = () => {
       linkTo: "#paint-fiberglass"
     },
     {
-      image: boatStorage,
+      image: openAirStorage,
       title: "Secure Storage & Maintenance",
       subtitle: "Keep your vessel safe and sea-ready year-round",
       linkTo: "#boat-management"
