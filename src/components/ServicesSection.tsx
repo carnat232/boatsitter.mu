@@ -7,7 +7,7 @@ const ServicesSection = () => {
       id: "boat-storage",
       icon: Warehouse,
       title: "Boat Storage",
-      description: "Secure, climate-controlled storage facilities with 24/7 monitoring for your peace of mind."
+      description: "Gated and secured parking space with 24/7 monitoring for your peace of mind."
     },
     {
       id: "new-boat-building",
@@ -19,7 +19,7 @@ const ServicesSection = () => {
       id: "mechanical-electrical",
       icon: Wrench,
       title: "Mechanical & Electrical",
-      description: "Complete engine overhauls, electrical systems, and diagnostic services by certified technicians."
+      description: "Complete engine overhauls, electrical systems, and diagnostic services."
     },
     {
       id: "paint-fiberglass",
