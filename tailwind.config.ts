@@ -21,6 +21,7 @@ export default {
 			fontFamily: {
 				poppins: ['Poppins', 'sans-serif'],
 				dancing: ['Dancing Script', 'cursive'],
+				corsiva: ['Monotype Corsiva', 'cursive'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
