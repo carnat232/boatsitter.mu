@@ -6,7 +6,7 @@ import boatRepair from "@/assets/boat-repair.jpg";
 import boatPainting from "@/assets/boat-painting.jpg";
 import boatStorage from "@/assets/boat-storage.jpg";
 import marineRescue from "@/assets/marine-rescue.jpg";
-import boatsitterLogo from "/lovable-uploads/78849d4f-6526-4e15-96e2-8d29e0f7a38d.png";
+import boatsitterLogo from "/lovable-uploads/aee0d204-0e6d-4506-b749-788d26664692.png";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
